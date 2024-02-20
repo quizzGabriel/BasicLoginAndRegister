@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-   
-        <form>
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" name="pwd"><br><br>
-        <input type="checkbox">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <form id="recuadro">
+      <h1>Login</h1>
+      <div id="Correo"> <!--Correo-->
+        <label for="username"></label><br />
+      <img src="img/correo.png" alt="">
+      <input type="text" id="username" name="username" placeholder="username"/><br />
+      </div>
+      <div id="Contrasena"><!--Contrasena-->
+        <label for="pwd"></label><br />
+        <img src="img/candado.png" alt="">
+        <input type="password" id="pwd" name="pwd" placeholder="password">
+        <img src="img/ojo.png" alt="">
+      </div>
+      <br>
+      <div><!--boton-->
+        <button id="boton" name="LoginNow">Login Now</button>
+        <p>dont have an account <a href="sign up now">sign  up now</a></p>
+      </div>
+      <div id="checkbox"><!--Checkbox-->
+        <input type="checkbox" id="check">
         <label for="checkbox">Remember me</label>
         <a href="forgot password">forgot password</a>
-        <br><br>
-        <input type="submit" value="log in">
-        <p>dont have an account  <a href="signtup now">signtup now</a></p> 
-        
-      </form>
-
-
-</body>
+      </div>  
+      <br /><br />
+    </form>
+  </body>
 </html>
