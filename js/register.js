@@ -20,14 +20,14 @@ const validarFormularioRegister = (e) => {
             validarCampo(expresiones.email, e.target, "email");
             break;
         case "psw":
-            validarCampo(expresiones.password, e.target, "psw");
+            validarCampo(expresiones.psw, e.target, "psw");
             validarpassword();
             break;
         case "telefono":
             validarCampo(expresiones.telefono, e.target, "telefono");
             break;
         case "username":
-            validarCampo(expresiones.nombre, e.target,"username");
+            validarCampo(expresiones.username, e.target,"username");
             break;
         case "confirmacion":
             validarpassword(); 
@@ -59,11 +59,11 @@ if (contrasena.value !== valid.value || contrasena.value === '' || valid.value =
 {
     document.getElementById("valida").classList.add('is-invalid');
     document.getElementById("valida").classList.remove('is-valid');
-    campos[password]=false;   
+    campos["password"]=false;   
 }
 else{
     document.getElementById("valida").classList.add('is-valid');
     document.getElementById("valida").classList.remove('is-invalid');
-    campos[password]=true; 
+    campos["password"]=true; 
 }
 }
