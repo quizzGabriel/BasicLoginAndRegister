@@ -1,0 +1,38 @@
+
+#login{
+    text-align: center;
+    width: 350px;
+    background-color: red ;    
+}
+#form_login{
+    
+}
+input{
+    text-decoration: none;
+}
+#email{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#img_correo{
+    width: 20px;
+}
+#password{
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    justify-content: center;
+}
+#candado{
+    height: 20px;
+    width: 20px;
+}
+#eye{
+
+}
+#button_login{
+    border-radius: 100%;
+    color: white;
+    background-color: blue;
+}

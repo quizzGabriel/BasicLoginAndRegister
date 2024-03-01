@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-   
-        <form>
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="pwd">Password:</label><br>
-        <input type="password" id="pwd" name="pwd"><br><br>
-        <input type="checkbox">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body> 
+
+
+  <div id="login">
+    <form id="form_login">
+      <p>Login</p><br>
+      <div id="email">
+        <img src="img/correo.png" alt="" id="img_correo">
+        <label for="username"></label><br>
+        <input type="text" id="username" placeholder="Enter your email"><br>
+      </div>
+
+      <div id="password">
+        <img src="img/candado.png" alt="" id="candado">
+        <label for="pwd"></label><br>
+        <input type="password" id="pwd" placeholder="Confirm a password">
+        <img src="img/ojo.png" alt="" id="eye">
+        <br><br>
+      </div>
+
+      <div>
+        <input type="checkbox" id="chk">
         <label for="checkbox">Remember me</label>
         <a href="forgot password">forgot password</a>
         <br><br>
-        <input type="submit" value="log in">
-        <p>dont have an account  <a href="signtup now">signtup now</a></p> 
-        
-      </form>
+      </div>
 
+      <div>
+        <button id="button_login" name="button">Login Now</button>
+      </div>
+
+      <div>
+        <p>dont have an account <a href="register.html">signup now</a></p>
+      </div>
+
+
+    </form>
+  </div>
 
 </body>
+
 </html>
+<script src="js/movimiento.js"></script>
+<!-- <script>
+const pwd = document.getElementById("pwd");
+const chk = document.getElementById("chk");
+
+chk.onchange = function(e){
+    pwd.type = chk.checked ? "text" : "password";
+};
+</script> -->

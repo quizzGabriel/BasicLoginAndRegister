@@ -1,0 +1,10 @@
+*{
+    /* background-color: #2596be; */
+}
+.container{
+    background-color: white;
+    margin-top: 300px;
+}
+.row{
+    padding: 10px;
+}
