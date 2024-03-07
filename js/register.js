@@ -20,14 +20,14 @@ const validarFormularioRegister = (e) => {
             validarCampo(expresiones.email, e.target, "email");
             break;
         case "psw":
-            validarCampo(expresiones.password, e.target, "psw");
+            validarCampo(expresiones.psw, e.target, "psw");
             validarpassword();
             break;
         case "telefono":
             validarCampo(expresiones.telefono, e.target, "telefono");
             break;
         case "username":
-            validarCampo(expresiones.nombre, e.target,"username");
+            validarCampo(expresiones.username, e.target,"username");
             break;
         case "confirmacion":
             validarpassword(); 
