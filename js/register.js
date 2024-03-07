@@ -59,11 +59,11 @@ if (contrasena.value !== valid.value || contrasena.value === '' || valid.value =
 {
     document.getElementById("valida").classList.add('is-invalid');
     document.getElementById("valida").classList.remove('is-valid');
-    campos[password]=false;   
+    campos["password"]=false;   
 }
 else{
     document.getElementById("valida").classList.add('is-valid');
     document.getElementById("valida").classList.remove('is-invalid');
-    campos[password]=true; 
+    campos["password"]=true; 
 }
 }
