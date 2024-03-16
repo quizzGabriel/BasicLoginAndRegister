@@ -1,4 +1,11 @@
+import { user , addUser} from './modules/user.js';
+
 const inputs=document.querySelectorAll('input');
+const formulario = document.getElementById('form-contact');
+const nombre = document.getElementById('username'); 
+const correo = document.getElementById('email');  
+const telefono = document.getElementById('telefono'); 
+const contra = document.getElementById('psw'); 
 
 const expresiones ={
     email: /^[\w._%+-]+@[\w.-]+\.[a-zA-Z]{2,4}$/,
@@ -16,18 +23,18 @@ const campos = {
 
 const validarFormularioRegister = (e) => {
     switch (e.target.name) {
+        case "username":
+            validarCampo(expresiones.username, e.target,"username");
+            break;
+        case "telefono":
+            validarCampo(expresiones.telefono, e.target, "telefono");
+            break;
         case "email":
             validarCampo(expresiones.email, e.target, "email");
             break;
         case "psw":
             validarCampo(expresiones.psw, e.target, "psw");
             validarpassword();
-            break;
-        case "telefono":
-            validarCampo(expresiones.telefono, e.target, "telefono");
-            break;
-        case "username":
-            validarCampo(expresiones.username, e.target,"username");
             break;
         case "confirmacion":
             validarpassword(); 
@@ -67,3 +74,37 @@ else{
     campos["password"]=true; 
 }
 }
+
+let usuarios = [];
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if(campos.username && campos.telefono && campos.psw && campos.email){
+
+        addUser(usuarios, nombre.value, telefono.value, contra.value, correo.value);
+
+    var url ='http://localhost:8081/user';
+
+        fetch( url,{
+            method: 'POST',
+            body: JSON.stringify({
+                userName: nombre.value,
+                userEmail: correo.value,
+                userPhone: telefono.value,
+                password: contra.value
+            }),
+            headers: {
+                'Content-Type': 'aplication/json',
+            }
+            
+        }).then(response => response.json())
+        
+        .then(data => {
+            console.log('Respuesta aceptada');
+        })
+        .catch(error => {
+            console.log('Datos incorrectos', error);
+        });
+    }
+})
