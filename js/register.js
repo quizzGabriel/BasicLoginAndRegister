@@ -88,14 +88,15 @@ formulario.addEventListener('submit', (e) => {
 
         fetch( url,{
             method: 'POST',
-            body: JSON.stringify({
+            body:
+            JSON.stringify({
                 userName: nombre.value,
                 userEmail: correo.value,
                 userPhone: telefono.value,
                 password: contra.value
             }),
             headers: {
-                'Content-Type': 'aplication/json',
+                'Content-Type': 'application/json',
             }
             
         }).then(response => response.json())
